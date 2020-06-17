@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:align="http://www.w3.org/1999/xhtml">
+<meta http-equiv="content-type" content="text/html" charset="UTF-8">
+<head>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>Login</title>
+    <style>
+    body{background-image:url(20200615t2.JPG);
+         background-position: center 0;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: 100%;
+         -webkit-background-size: cover;
+         -o-background-size: cover;
+         -moz-background-size: cover;
+         -ms-background-size: cover;}
+
+    </style>
+<!--    <style>div{ border:1px dashed #f00}</style>-->
+</head>
+<body>
+<div class="modal-body">
+    <div class="container"></div>
+    <font size="1">
+        <h1 align="center" style="margin-bottom:40px">自动化开发平台</h1>
+    </font>
+
+    <form class="form-horizontal" method="post" action="/login/">
+    {% csrf_token %}
+
+
+    <div class="container col-md-8">
+        <div class="row" style="margin-bottom:10px ">
+            <div class="col-md-5" align="right">
+                <label for="username">用户名：</label>
+            </div>
+
+            <div class="col-md-2" align="left">
+                <input name="username" class="form-control" type="text"  id="username" placeholder="请输入账号">
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:40px">
+            <div class="col-md-5" align="right">
+                <label for="password">密 &nbsp;&nbsp; 码：</label>
+            </div>
+
+            <div class="col-md-2" align="left">
+                <input name="password" class="form-control" type="password"  id="password" placeholder="请输入密码">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2" align="center">
+                <button type="submit" class="btn btn-outline-primary btn-block" >登录</button>
+            </div>
+
+          </div>
+    </div>
+
+    <br>{{ error }}<br>
+<!--    &nbsp; <button style="width:220px; height:28px;" id = "submit" type="submit">登 录</button>-->
+
+
+    </form>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>自动化测试平台</title>
+</head>
+<body>
+<ul class="nav navbar-expand-lg bg-dark navbar-dark fixed-top" style="padding-bottom=40px;">
+    <li>欢迎您，<a href="#">{{user}}</a></li>
+    <li><a href="/logout/">退出</a> </li>
+
+
+</ul>
+<ul>
+    <li><a href="/apis_manage/">单一接口管理</a> </li>
+    <li><a href="/apitest_manage/">流程接口测试管理</a> </li>
+    <li><a href="/apistep_manage/">流程接口测试步骤管理</a> </li>
+</ul>
+</body>
+</html>
